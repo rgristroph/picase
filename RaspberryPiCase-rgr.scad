@@ -87,8 +87,8 @@ module usb() {
 module power() { //<-- rotated and repositioned for B+
 	rotate([0,0,90]){ 
 		hull() {
-			translate ([-1,-17,9]) cube([4,7.9,2]);
-			translate ([-1,-16,8]) cube([4,5.9,.2]);
+			translate ([-1,-17,8]) cube([4,8.4,4]);
+			translate ([-1,-16,7]) cube([4,6.4,.3]);
 		}
 	}	
 }
