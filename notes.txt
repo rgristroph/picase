@@ -3,9 +3,9 @@ Iteration 1 changes:
 
 1) Flipping the stl in slic3r mirrored it.  Do the flipping in OpenSCAD.
 
-2) Vent slots need to be re-thought to be easier to print cleanly
+*2) Vent slots need to be re-thought to be easier to print cleanly
 
-3) HDMI hole needs to be slightly longer
+*3) HDMI hole needs to be slightly longer
 
 4) Round audio hole was not bridged at top - maybe leave open for
 easier installation ?

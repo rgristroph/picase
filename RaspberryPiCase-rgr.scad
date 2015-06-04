@@ -51,12 +51,12 @@ module digital() { //<-- moved for B+
 
 // Hole - HDMI
 module hdmi() {
-	translate ([27,-1,10.5]) {
-		hull(){
-		cube([15,4,4]);
-		translate([2.5,0,-2.5]) cube([10,4,1]);
-		}
-	}
+  translate ([27,-1,10.5]) {
+    hull(){
+      cube([15,4,4]);
+      translate([2.5,0,-2.5]) cube([10,4,1]);
+    }
+  }
 }
 
 // Hole - Ethernet
