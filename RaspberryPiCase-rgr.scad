@@ -115,7 +115,7 @@ module gpio() {
 
 // Hole - Camera cable exit
 module camera() {
-  translate( [2.0*25.4, 0.1*25.4, 21]) cube([0.05* 25.4, 0.65 * 25.4 , 0.3 * 25.4]);
+  translate( [2.0*25.4, 0.1*25.4, 21]) cube([0.05* 25.4, 0.75 * 25.4 , 0.3 * 25.4]);
 }
 
 // Camera mounting tab

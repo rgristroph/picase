@@ -20,8 +20,8 @@ easier installation ?
 
 *9) USB power hole lower and taller
 
-10) Connecting tabs interfere - only at corners ?
+10) Connecting tabs interfere - only at corners ? (fixed by not mirroring)
 
 11) Stand-off tabs on the bottom are ok
 
-12) Camera cable slot slightly wider
+*12) Camera cable slot slightly wider
