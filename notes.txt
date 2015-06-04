@@ -10,7 +10,7 @@ Iteration 1 changes:
 *4) Round audio hole was not bridged at top - maybe leave open for
 easier installation ?
 
-5) Ethernet hole moved down slightly, bigger
+*5) Ethernet hole moved down slightly, bigger
 
 6) USB hole 2.5 mm longer in the direction of the ethernet
 

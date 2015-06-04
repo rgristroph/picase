@@ -64,11 +64,11 @@ module hdmi() {
 
 // Hole - Ethernet
 module ethernet() {
-	union() {
-	translate ([length,5,11.5]) cube([5,14,8.5]);
-	translate ([length,8.5,9.7]) cube([5,7,2]);
-	translate ([length,9.5,8.5]) cube([5,5,2]);
-	}
+  union() {
+    translate ([length,5,11.0]) cube([5,14,9.5]);
+    translate ([length,8.0,9.7]) cube([5,7,2]);
+    translate ([length,9.0,8.5]) cube([5,5,2]);
+  }
 }
 
 
