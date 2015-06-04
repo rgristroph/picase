@@ -12,7 +12,7 @@ easier installation ?
 
 *5) Ethernet hole moved down slightly, bigger
 
-6) USB hole 2.5 mm longer in the direction of the ethernet
+*6) USB hole 2.5 mm longer in the direction of the ethernet
 
 7) Camera holder slightly larger in width, lens hole slightly wider
 

@@ -79,7 +79,7 @@ module usb() {
 //	translate ([length,44,17.5]) cube([5,13.1,5.5]); //<-- added for B+
 //	translate ([length,44,8.8]) cube([5,13.1,5.5]); //<-- added for B+
 
-   translate ([length,26.6,8.8]) cube([5,1.25 * 25.4, 0.6 * 25.4]);
+   translate ([length,24.1,8.8]) cube([5,1.35 * 25.4, 0.6 * 25.4]);
 }
 
 
