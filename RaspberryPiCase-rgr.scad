@@ -4,7 +4,7 @@
 width = 60.5;
 length = 90.0;
 //thickness = 2;
-thickness = 1.05;
+thickness = 1.2;
 
 total_height = 28;
 
@@ -100,8 +100,9 @@ module sdcard() {
 // Ventilation
 module vents() {
   cube([2,10,10]);
-  translate([4,0,0]) cube([2,10,10]);
-  translate([8,0,0]) cube([2,10,10]);
+  translate([6,0,0]) cube([2,10,10]);
+  translate([12,0,0]) cube([2,10,10]);
+  translate([18,0,0]) cube([2,10,10]);
 }
 
 // Hole - GPIO
@@ -162,7 +163,7 @@ difference() {
 
 }
 
-*difference() {
+difference() {
 	union() {
 		difference() {
 			topbox();
@@ -181,6 +182,6 @@ difference() {
    gpio();
    camera();
 	translate([5,-1,19]) vents();
-	translate([75,53,19]) vents();
+	translate([67,53,19]) vents();
 }
 
