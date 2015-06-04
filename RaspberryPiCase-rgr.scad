@@ -121,9 +121,9 @@ module camera() {
 // Camera mounting tab
 module camtab() {
   difference() {
-    cube( [(0.15 * 25.4) + (thickness * 2), (25.4 * 1) + (thickness*2), 25.4 * 1 ]); // outer 
-    translate([thickness,thickness,thickness]) cube( [ 0.15 * 25.4, 25.4 * 1, 25.4 * 1 ]); // inner pocket
-    translate( [0 , (0.33*25.4) + thickness, (0.4 * 25.4) + thickness]) cube( [thickness*2, .315 * 25.4, .6 * 25.4] );
+    cube( [(0.15 * 25.4) + (thickness * 2), (25.4 * 1.1) + (thickness*2), 25.4 * 1 ]); // outer 
+    translate([thickness,thickness,thickness]) cube( [ 0.15 * 25.4, 25.4 * 1.1, 25.4 * 1 ]); // inner pocket
+    translate( [0 , (0.38*25.4) + thickness, (0.4 * 25.4) + thickness]) cube( [thickness*2, .35 * 25.4, .6 * 25.4] );
   } 
 }
 
@@ -155,7 +155,7 @@ difference() {
     translate ([59,thickness,2]) cube([20,2,4]);
 
     translate ([ 0.5 * 25.4, width - thickness, 0 ]) mounttab();
-    translate ([ -((0.15*25.4)+(2*thickness)), -5, 0]) camtab(); 
+    translate ([ -((0.15*25.4)+(2*thickness)), -7.5, 0]) camtab(); 
   }
 
 	digital();
