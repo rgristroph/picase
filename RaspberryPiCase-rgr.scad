@@ -1,7 +1,7 @@
 //based on http://www.thingiverse.com/thing:47270
 //adapted for model B+
 
-width = 60.5;
+width = 61.5;
 length = 90.0;
 //thickness = 2;
 thickness = 1.2;
