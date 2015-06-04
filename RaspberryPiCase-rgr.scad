@@ -44,7 +44,7 @@ module topbox() {
 // Hole - Digital
 module digital() { //<-- moved for B+
 	translate ([57,-0.1,10]) { //pos=70
-		rotate([-90,90,0]) cylinder(3,4.2,3.2,$fn=25);
+		rotate([-90,90,0]) cylinder(3,4.2,3.2, $fn=25);
 	}
 }
 
@@ -53,8 +53,8 @@ module digital() { //<-- moved for B+
 module hdmi() {
   translate ([27,-1,10.5]) {
     hull(){
-      cube([15,4,4]);
-      translate([2.5,0,-2.5]) cube([10,4,1]);
+      cube([16,4,4]);
+      translate([3,0,-3]) cube([10,4,1]);
     }
   }
 }
@@ -163,7 +163,7 @@ difference() {
 
 }
 
-difference() {
+*difference() {
 	union() {
 		difference() {
 			topbox();
