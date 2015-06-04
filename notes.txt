@@ -7,7 +7,7 @@ Iteration 1 changes:
 
 *3) HDMI hole needs to be slightly longer
 
-4) Round audio hole was not bridged at top - maybe leave open for
+*4) Round audio hole was not bridged at top - maybe leave open for
 easier installation ?
 
 5) Ethernet hole moved down slightly, bigger

@@ -43,9 +43,12 @@ module topbox() {
 
 // Hole - Digital
 module digital() { //<-- moved for B+
-	translate ([57,-0.1,10]) { //pos=70
-		rotate([-90,90,0]) cylinder(3,4.2,3.2, $fn=25);
-	}
+  translate ([57,-0.1,10]) { //pos=70
+    union() {
+      rotate([-90,90,0]) cylinder(h=3,r=4.5, $fn=25);
+      translate([-4.5,0,0]) cube([9,9,9]);
+    }
+  }
 }
 
 
@@ -163,7 +166,7 @@ difference() {
 
 }
 
-*difference() {
+difference() {
 	union() {
 		difference() {
 			topbox();
@@ -176,12 +179,11 @@ difference() {
 	translate ([thickness,20,9]) cube([2,20,17]);
 	}
 
-	digital();
-	hdmi();
+	//digital();
+	//hdmi();
 	usb();
    gpio();
    camera();
 	translate([5,-1,19]) vents();
 	translate([67,53,19]) vents();
 }
-
