@@ -6,7 +6,7 @@ length = 90.0;
 //thickness = 2;
 thickness = 0.8;
 
-floor_ceiling_thinness_fudge = 0.5;
+floor_ceiling_thinness_fudge = 0.2;
 
 total_height = 28;
 
@@ -127,6 +127,7 @@ module camtab() {
       cube( [(0.15 * 25.4) + (thickness * 2), (25.4 * 1.1) + (thickness*2), 25.4 * 1 ]); // outer 
       translate([thickness,thickness,thickness]) cube( [ 0.15 * 25.4, 25.4 * 1.1, 25.4 * 1 ]); // inner pocket
       translate( [0 , (0.38*25.4) + thickness, (0.4 * 25.4) + thickness]) cube( [thickness*2, .35 * 25.4, .6 * 25.4] );
+      translate([0,0.15*25.4,thickness]) cube([0.3* 25.4, 0.75 * 25.4 , 0.05 * 25.4]);
     }
     difference() {
       translate([(0.15 * 25.4) + (thickness * 2 ), (0.25 * 1.1 * 25.4),0]) cube([0.5 * 25.4, 0.5 * 25.4, thickness]);
@@ -140,7 +141,7 @@ module cammountpost() {
   difference() {
     cube([ 0.5 * 25.4, 1.5* 25.4, 0.5 * 25.4]);
     translate([0.25 * 25.4, 0.25 * 25.4,0]) cylinder(h=(0.5 * 25.4), r=(1/16 * 25.4), $fn=25);
-    translate([0.25 * 25.4, 1.75 * 25.4,0.25 * 25.4]) rotate([90.0,0,0]) cylinder(h=(1.75 * 25.4), r=(1/16 * 25.4), $fn=25);
+    translate([0.25 * 25.4, 1.75 * 25.4,0.25 * 25.4]) rotate([90.0,0,0]) cylinder(h=(1.85 * 25.4), r=(1/16 * 25.4), $fn=25);
   }
 }
 
@@ -167,8 +168,8 @@ difference() {
 			//translate([1.5 * 25.4, 0.5 * 25.4, 0]) cylinder(r=(1/16 * 25.4), h=50*thickness, $fn=25);
      }
     // These are the standoffs that hold up the circuit board
-    translate ([thickness, width - (2*thickness) -2, thickness]) cube([20,2,4]);
-    translate ([thickness,thickness,thickness]) cube([20,2,4]);
+    translate ([thickness, width - (2*thickness) -2, thickness - floor_ceiling_thinness_fudge]) cube([20,2,4]);
+    translate ([thickness,thickness,thickness - floor_ceiling_thinness_fudge]) cube([20,2,4]);
     translate ([66, width - (2*thickness) - 2 , 2]) cube([20,2,4]);
     translate ([59,thickness,2]) cube([20,2,4]);
 
@@ -185,7 +186,7 @@ difference() {
 }
 
 // Use this to flip it for printing: translate([0,-10,28]) rotate([180,0,0]) 
-translate([0,-10,28]) rotate([180,0,0]) difference() {
+translate([0,-10,28]) rotate([180,0,0])  difference() {
   union() {
     difference() {
       topbox();
@@ -193,11 +194,11 @@ translate([0,-10,28]) rotate([180,0,0]) difference() {
       // Hole for swivle post mounting
       translate([1.5 * 25.4, 0.5 * 25.4, total_height - (2*thickness)]) cylinder(r=(1/16 * 25.4), h=50*thickness, $fn=25);
     }
-    translate ([63,thickness, total_height - thickness - 17 ]) cube([20,2,17]);
+    translate ([(length-17-(2*thickness)),thickness, total_height - (thickness - floor_ceiling_thinness_fudge) - 17 ]) cube([20,2,17]);
     //translate ([18,2,9]) cube([20,2,17]);
-    translate ([64,width - thickness - 2,11]) cube([20,2,17]);
-    translate ([18,width - thickness - 2,11]) cube([20,2,15]);
-    translate ([thickness,20,9]) cube([2,20,17]); 
+    translate ([(length-17-(2*thickness)),width - (2*thickness) - 2,11 + floor_ceiling_thinness_fudge - 0.5]) cube([20,2,17]);
+    translate ([18,width - (2 * thickness) - 2,11 + floor_ceiling_thinness_fudge + 1.2]) cube([20,2,15]);
+    translate ([thickness,20,9 + 2]) cube([2,20,17]); 
   }
 
   //digital();
